@@ -1,9 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿
+using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SeleniumFirst01
@@ -23,23 +26,27 @@ namespace SeleniumFirst01
         {
             //navigagte to google page
 
-            driver.Navigate().GoToUrl("https://www.google.com");
+            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
 
         }
 
         [Test]
         public void ExecuteTest()
         {
-            //find the element
-            IWebElement element = driver.FindElement(By.Name("q"));
+            //Tittle
+            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
 
-            //perform operation
-            element.SendKeys("execute  automation");
+            //Initial
+            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Nmae");
 
+            //Click 
+            SeleniumSetMethods.Click(driver, "Save", "Name");
+            
         }
         [TearDown]
         public void CleanUp()
         {
+            Thread.Sleep(500);
             driver.Close();
 
         }

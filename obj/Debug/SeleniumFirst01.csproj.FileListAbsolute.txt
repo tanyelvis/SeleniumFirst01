@@ -1,3 +1,9 @@
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\nunit.engine.dll
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\nunit.engine.api.dll
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\nunit.engine.core.dll
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\testcentric.engine.metadata.dll
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\SeleniumFirst01.exe.config
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\SeleniumFirst01.exe
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\SeleniumFirst01.pdb
@@ -7,6 +13,7 @@ C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\WebDr
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\nunit.framework.xml
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\WebDriver.xml
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\bin\Debug\WebDriver.Support.xml
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.csprojAssemblyReference.cache
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.csproj.CoreCompileInputs.cache
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.csproj.CopyComplete
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.exe
