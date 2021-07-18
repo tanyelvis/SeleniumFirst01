@@ -27,6 +27,7 @@ namespace SeleniumFirst01
             //navigagte to google page
 
             driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            Console.WriteLine("Openned URL");
 
         }
 
@@ -34,20 +35,29 @@ namespace SeleniumFirst01
         public void ExecuteTest()
         {
             //Tittle
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Mr.", "Id");
+            SeleniumSetMethods.SelectDropDown(driver,"TitleId","Mr.","Id");
 
             //Initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Nmae");
+            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
+
+            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+
 
             //Click 
             SeleniumSetMethods.Click(driver, "Save", "Name");
             
         }
+
+        
+
+
+
         [TearDown]
         public void CleanUp()
         {
-            Thread.Sleep(500);
-            driver.Close();
+            //Thread.Sleep(500);
+           driver.Close();
 
         }
     }
