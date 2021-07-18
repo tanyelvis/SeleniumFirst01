@@ -17,3 +17,4 @@ C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\Selen
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.csproj.CopyComplete
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.exe
 C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.pdb
+C:\Users\elvistanyi\source\repos\SeleniumFirst01\SeleniumFirst01\obj\Debug\SeleniumFirst01.csprojAssemblyReference.cache

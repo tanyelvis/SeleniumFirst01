@@ -15,7 +15,7 @@ namespace SeleniumFirst01
     {
 
         //create the reference for our browser
-        IWebDriver driver = new ChromeDriver();
+        //IWebPropertiesCollection.PropertiesCollection.driver PropertiesCollection.PropertiesCollection.driver = new ChromePropertiesCollection.PropertiesCollection.driver();
         static void Main(string[] args)
         {
         
@@ -24,9 +24,11 @@ namespace SeleniumFirst01
         [SetUp]
         public void Initialize()
         {
+
+            PropertiesCollection.driver = new ChromeDriver();
             //navigagte to google page
 
-            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
             Console.WriteLine("Openned URL");
 
         }
@@ -35,21 +37,25 @@ namespace SeleniumFirst01
         public void ExecuteTest()
         {
             //Tittle
-            SeleniumSetMethods.SelectDropDown(driver,"TitleId","Mr.","Id");
+            SeleniumSetMethods.SelectDropDown("TitleId","Mr.",PropertyType.Id);
 
             //Initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "executeautomation", "Name");
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
+            SeleniumSetMethods.EnterText( "Initial", "executeautomation", PropertyType.Name);
+            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText( "TitleId", PropertyType.Id));
 
-            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText( "Initial",PropertyType.Name));
 
 
             //Click 
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click( "Save", PropertyType.Name);
             
         }
 
-        
+        [Test]
+        public void NextTest()
+        {
+            Console.WriteLine("Next method");
+        }
 
 
 
@@ -57,7 +63,8 @@ namespace SeleniumFirst01
         public void CleanUp()
         {
             //Thread.Sleep(500);
-           driver.Close();
+           PropertiesCollection.driver.Close();
+           Console.WriteLine("Close Browser");
 
         }
     }
