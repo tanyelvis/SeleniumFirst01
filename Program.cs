@@ -36,18 +36,26 @@ namespace SeleniumFirst01
         [Test]
         public void ExecuteTest()
         {
+
+            //initialise the page by calling its reference
+
+            EAPageObject page = new EAPageObject();
+            page.txtInitial.SendKeys("executeautomation");
+            page.btnSave.Click();
+
+
             //Tittle
-            SeleniumSetMethods.SelectDropDown("TitleId","Mr.",PropertyType.Id);
+            //SeleniumSetMethods.SelectDropDown("TitleId","Mr.",PropertyType.Id);
 
             //Initial
-            SeleniumSetMethods.EnterText( "Initial", "executeautomation", PropertyType.Name);
-            Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText( "TitleId", PropertyType.Id));
+            //SeleniumSetMethods.EnterText( "Initial", "executeautomation", PropertyType.Name);
+            //Console.WriteLine("The value from my Title is: " + SeleniumGetMethods.GetText( "TitleId", PropertyType.Id));
 
-            Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText( "Initial",PropertyType.Name));
+            //Console.WriteLine("The value from my Initial is: " + SeleniumGetMethods.GetText( "Initial",PropertyType.Name));
 
 
             //Click 
-            SeleniumSetMethods.Click( "Save", PropertyType.Name);
+            //SeleniumSetMethods.Click( "Save", PropertyType.Name);
             
         }
 
