@@ -9,10 +9,16 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumFirst01
 {
-    class SeleniumSetMethods
+   public static class SeleniumSetMethods
     {
-        //EnterText
-        public static void EnterText(  IWebElement element, string value)
+        /// <summary>
+        /// Extended method for entering text in the control
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+        
+            //EnterText
+        public static void EnterText( this IWebElement element, string value)
         {
             element.SendKeys(value);
           //  if (elementtype == PropertyType.Id)
@@ -22,8 +28,13 @@ namespace SeleniumFirst01
 
         }
 
+        /// <summary>
+        /// click into a button,checkbox,options,etc
+        /// </summary>
+        /// <param name="element"></param>
+
         // lick int the button, checkbox,options etc
-        public static void Click( IWebElement element)
+        public static void Clicks( this IWebElement element)
 
         {
             element.Click();
@@ -33,9 +44,17 @@ namespace SeleniumFirst01
             //if (elementtype == PropertyType.Name)
              //   PropertiesCollection.driver.FindElement(By.Name(element)).Click();
         }
+       
+        
+        /// <summary>
+        /// selecting a dropdown control
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+
 
         //selecting dropdown control
-        public static void SelectDropDown( IWebElement element, string value)
+        public static void SelectDropDown(this  IWebElement element, string value)
         {
             new SelectElement(element).SelectByText(value);
 

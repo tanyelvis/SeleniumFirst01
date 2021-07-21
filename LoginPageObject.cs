@@ -24,18 +24,19 @@ namespace SeleniumFirst01
         [FindsBy(How = How.Name, Using = "Login")]
         public IWebElement btnLogin { get; set; }
 
-       //method
-       public EAPageObject Login(string username, string password)
+        //method
+        public EAPageObject Login(string userName, string password)
         {
             //username
-            txtUserName.SendKeys(username);
+            txtUserName.EnterText(userName);
             //password
-            txtPassword.SendKeys(password);
+            txtPassword.EnterText(password);
             //click button
             btnLogin.Submit();
 
             //return the page object
             return new EAPageObject();
+
 
 
 
