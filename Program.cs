@@ -40,11 +40,13 @@ namespace SeleniumFirst01
         public void ExecuteTest()
         {
 
+            ExcelLib.PopulateInCollection(@"C:\Book1.xlsx");
+
             //LOGIN TO APPLICATION
             LoginPageObject pageLogin = new LoginPageObject();
-            EAPageObject pageEA = pageLogin.Login("execute", "automation");
+            EAPageObject pageEA = pageLogin.Login(ExcelLib.ReadData(1,"UserName"), ExcelLib.ReadData(1, "Password"));
 
-            pageEA.FillUserForm("kk", "karthik", "Automation");
+            pageEA.FillUserForm(ExcelLib.ReadData(1, "Initial"),ExcelLib.ReadData(1, "MiddleName"),ExcelLib.ReadData(1, "FirstName"));
 
            // pageEA.txtInitial.SendKeys("executeautomation");
             //pageEA.btnSave.Click();

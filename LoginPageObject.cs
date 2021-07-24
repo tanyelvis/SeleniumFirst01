@@ -31,15 +31,14 @@ namespace SeleniumFirst01
             txtUserName.EnterText(userName);
             //password
             txtPassword.EnterText(password);
-            //click button
+            //click button  
             btnLogin.Submit();
 
             //return the page object
             return new EAPageObject();
 
 
-
-
+           
         }
     }
     
